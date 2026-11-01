@@ -21,6 +21,9 @@ const members = [
   { n: "Member Six", r: "Programmer" },
   { n: "Member Seven", r: "Outreach Lead" },
   { n: "Member Eight", r: "Engineering Notebook" },
+  { n: "Member Nine", r: "Builder" },
+  { n: "Member Ten", r: "Autonomous Programmer" },
+  { n: "Member Eleven", r: "Scout & Strategy" },
 ];
 
 function Team() {
