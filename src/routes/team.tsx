@@ -14,7 +14,7 @@ export const Route = createFileRoute("/team")({
 
 const members = [
   { n: "Dharun", r: "Goal: Design a faster, more reliable robot in CAD" },
-  { n: "Member Two", r: "Lead Programmer" },
+  { n: "Dheechu", r: "Lead Programmer" },
   { n: "Member Three", r: "Lead Builder" },
   { n: "Member Four", r: "CAD Designer" },
   { n: "Member Five", r: "Driver" },
