@@ -4,10 +4,10 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/team", label: "About" },
   { to: "/robot", label: "Robot" },
-  { to: "/contact", label: "Season" },
+  { to: "/contact", label: "Contact Us" },
   { to: "/outreach", label: "Outreach" },
   { to: "/awards", label: "Sponsers" },
-  { to: "/gallery", label: "Contact Us" },
+  { to: "/gallery", label: "Season" },
 ] as const;
 
 export function SiteHeader() {
