@@ -24,7 +24,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <span className="ml-auto inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-display text-lg font-extrabold tracking-wider text-primary sm:text-xl">
+        <span className="ml-6 inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-display text-lg font-extrabold tracking-wider text-primary sm:text-xl">
           #31944
         </span>
       </div>
