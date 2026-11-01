@@ -13,7 +13,7 @@ export const Route = createFileRoute("/team")({
 });
 
 const members = [
-  { n: "Member One", r: "Captain" },
+  { n: "Dharun", r: "Goal: Design a faster, more reliable robot in CAD" },
   { n: "Member Two", r: "Lead Programmer" },
   { n: "Member Three", r: "Lead Builder" },
   { n: "Member Four", r: "CAD Designer" },
