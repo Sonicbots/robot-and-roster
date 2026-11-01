@@ -10,11 +10,11 @@ const links = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-ink/90 text-navy-foreground backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center gap-10 px-6 py-4">
         <Link to="/" className="font-display text-xl font-extrabold">
           SONIC<span className="text-primary"> BOTS</span>
         </Link>
-        <nav className="mr-16 flex gap-5 text-sm">
+        <nav className="flex gap-5 text-sm">
           {links.map((l) => (
             <Link key={l.to} to={l.to} className="opacity-70 hover:opacity-100" activeProps={{ className: "opacity-100 text-accent" }} activeOptions={{ exact: true }}>
               {l.label}
