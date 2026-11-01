@@ -7,7 +7,7 @@ const links = [
   { to: "/gallery", label: "Season" },
   { to: "/outreach", label: "Outreach" },
   { to: "/awards", label: "Sponsers" },
-  { to: "/gallery", label: "Season" },
+  { to: "/contact", label: "Contact Us" },
 ] as const;
 
 export function SiteHeader() {
