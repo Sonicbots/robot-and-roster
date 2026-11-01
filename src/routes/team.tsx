@@ -38,7 +38,7 @@ function Team() {
               {m.n.split(" ").map((w) => w[0]).join("")}
             </div>
             <h3 className="mt-5 text-xl font-bold">{m.n}</h3>
-            <p className="text-sm text-muted-foreground">{m.r}</p>
+            <p className="text-sm text-goal">{m.r}</p>
           </div>
         ))}
       </div>
