@@ -16,14 +16,14 @@ const members = [
   { n: "Dharun", r: "Goal: Design a faster, more reliable robot in CAD" },
   { n: "Dheechu", r: "Goal: Working Cad, while learning, pocketing and mastering, goal: Build a fully constrained, parametric. Robot model" },
   { n: "Hasini", r: "Goal: Tune pid every meeting and design decision" },
-  { n: "Member Four", r: "" },
-  { n: "Member Five", r: "Driver" },
-  { n: "Member Six", r: "Programmer" },
-  { n: "Member Seven", r: "Outreach Lead" },
-  { n: "Member Eight", r: "Engineering Notebook" },
-  { n: "Member Nine", r: "Builder" },
-  { n: "Member Ten", r: "Autonomous Programmer" },
-  { n: "Member Eleven", r: "Scout & Strategy" },
+  { n: "Kavin", r: "Goal: Use odometry for accurate field position" },
+  { n: "Nick", r: "Goal: Ensure models are accurate and manufacturable" },
+  { n: "Pranay", r: "Goal: Use AprilTags for vision-based alignment" },
+  { n: "Pranesh", r: "Goal: Grow leadership roles and advocate for first" },
+  { n: "Sanjay", r: "Goal: Focus on documentation and mechanical" },
+  { n: "Sumedh", r: "Goal: Write a consistent, accurate, autonomous program using Pedro Pathing" },
+  { n: "Varnika", r: "Goal: Tune pid control for shooting consistency" },
+  { n: "Viswa", r: "Goal: Design a every sub system as its own assembly" },
 ];
 
 function Team() {
