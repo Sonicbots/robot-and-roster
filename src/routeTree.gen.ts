@@ -10,7 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AwardsRouteImport } from './routes/awards'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as OutreachRouteImport } from './routes/outreach'
 import { Route as RobotRouteImport } from './routes/robot'
 import { Route as TeamRouteImport } from './routes/team'
 
@@ -19,9 +22,24 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AwardsRoute = AwardsRouteImport.update({
+  id: '/awards',
+  path: '/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OutreachRoute = OutreachRouteImport.update({
+  id: '/outreach',
+  path: '/outreach',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RobotRoute = RobotRouteImport.update({
@@ -37,34 +55,56 @@ const TeamRoute = TeamRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/awards': typeof AwardsRoute
   '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/outreach': typeof OutreachRoute
   '/robot': typeof RobotRoute
   '/team': typeof TeamRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/awards': typeof AwardsRoute
   '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/outreach': typeof OutreachRoute
   '/robot': typeof RobotRoute
   '/team': typeof TeamRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/awards': typeof AwardsRoute
   '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/outreach': typeof OutreachRoute
   '/robot': typeof RobotRoute
   '/team': typeof TeamRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/robot' | '/team'
+  fullPaths:
+    '/' | '/awards' | '/contact' | '/gallery' | '/outreach' | '/robot' | '/team'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/robot' | '/team'
-  id: '__root__' | '/' | '/contact' | '/robot' | '/team'
+  to:
+    '/' | '/awards' | '/contact' | '/gallery' | '/outreach' | '/robot' | '/team'
+  id:
+    | '__root__'
+    | '/'
+    | '/awards'
+    | '/contact'
+    | '/gallery'
+    | '/outreach'
+    | '/robot'
+    | '/team'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AwardsRoute: typeof AwardsRoute
   ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
+  OutreachRoute: typeof OutreachRoute
   RobotRoute: typeof RobotRoute
   TeamRoute: typeof TeamRoute
 }
@@ -78,11 +118,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/awards': {
+      id: '/awards'
+      path: '/awards'
+      fullPath: '/awards'
+      preLoaderRoute: typeof AwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/outreach': {
+      id: '/outreach'
+      path: '/outreach'
+      fullPath: '/outreach'
+      preLoaderRoute: typeof OutreachRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/robot': {
@@ -104,7 +165,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AwardsRoute: AwardsRoute,
   ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
+  OutreachRoute: OutreachRoute,
   RobotRoute: RobotRoute,
   TeamRoute: TeamRoute,
 }

@@ -5,6 +5,9 @@ const links = [
   { to: "/team", label: "Team" },
   { to: "/robot", label: "Robot" },
   { to: "/contact", label: "Contact" },
+  { to: "/outreach", label: "Outreach" },
+  { to: "/awards", label: "Awards" },
+  { to: "/gallery", label: "Gallery" },
 ] as const;
 
 export function SiteHeader() {
