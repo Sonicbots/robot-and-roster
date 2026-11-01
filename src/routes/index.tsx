@@ -40,7 +40,7 @@ function Index() {
           <h1 className="text-6xl font-extrabold leading-none md:text-8xl">
             Sonic<br /><span className="text-primary">Bots</span>
           </h1>
-          <p className="mt-6 max-w-lg text-lg opacity-80">A student robotics team that builds fast, codes smart and competes hard.</p>
+          <p className="mt-6 max-w-lg text-lg opacity-80">A team consisting of 11 members each with their own job and role in creating the overall robot.</p>
           <div className="mt-8 flex gap-3">
             <Link to="/team" className="rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground hover:opacity-90">Meet the team</Link>
             <Link to="/robot" className="rounded-full border border-navy-foreground/30 px-6 py-3 font-semibold hover:bg-navy-foreground/10">See the robot</Link>
