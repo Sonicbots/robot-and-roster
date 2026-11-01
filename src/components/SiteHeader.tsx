@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/sonic-bots-logo.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -15,11 +14,6 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-ink/90 text-navy-foreground backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-10 px-6 py-4">
-        <img
-          src={logoAsset.url}
-          alt="Sonic Bots Team 31944 logo"
-          className="ml-auto -mr-4 h-28 w-auto shrink-0"
-        />
         <Link to="/" className="font-display text-xl font-extrabold">
           SONIC<span className="text-primary"> BOTS</span>
         </Link>
