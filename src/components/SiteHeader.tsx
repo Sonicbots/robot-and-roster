@@ -28,11 +28,6 @@ export function SiteHeader() {
         <span className="-ml-6 inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-display text-lg font-extrabold tracking-wider text-primary sm:text-xl">
           #31944
         </span>
-        <img
-          src={logoAsset.url}
-          alt="Sonic Bots Team 31944 logo"
-          className="-ml-7 h-16 w-auto shrink-0"
-        />
       </div>
     </header>
   );
