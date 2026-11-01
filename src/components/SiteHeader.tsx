@@ -2,12 +2,12 @@ import { Link } from "@tanstack/react-router";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/team", label: "Team" },
+  { to: "/team", label: "About" },
   { to: "/robot", label: "Robot" },
   { to: "/contact", label: "Contact" },
   { to: "/outreach", label: "Outreach" },
-  { to: "/awards", label: "Awards" },
-  { to: "/gallery", label: "Gallery" },
+  { to: "/awards", label: "Sponsers" },
+  { to: "/gallery", label: "Season" },
 ] as const;
 
 export function SiteHeader() {
