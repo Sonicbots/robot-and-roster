@@ -31,7 +31,7 @@ export function SiteHeader() {
         <img
           src={logoAsset.url}
           alt="Sonic Bots Team 31944 logo"
-          className="ml-3 h-12 w-auto shrink-0"
+          className="-ml-7 h-16 w-auto shrink-0"
         />
       </div>
     </header>
