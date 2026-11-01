@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/sonic-bots-logo.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
