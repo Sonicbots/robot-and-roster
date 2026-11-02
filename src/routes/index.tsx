@@ -15,9 +15,9 @@ export const Route = createFileRoute("/")({
 
 const stats = [
   { n: "FTC", l: "FIRST Tech Challenge" },
-  { n: "  13", l: "Team members" },
-  { n: "3", l: "Competitions this season" },
-  { n: "1", l: "Mission: go fast" },
+  { n: "  11", l: "Team members" },
+  { n: "6", l: "CAD Members" },
+  { n: "5", l: "Programming Members" },
 ];
 
 const cards = [
