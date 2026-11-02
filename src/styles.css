@@ -99,6 +99,18 @@
   filter: drop-shadow(0 0 6px color-mix(in oklab, currentcolor 70%, transparent));
 }
 
+@keyframes hero-drop {
+  from { opacity: 0; transform: translateY(-48px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-drop {
+  opacity: 0;
+  animation: hero-drop 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .falling-tool { animation: none; }
+  .falling-tool { opacity: 0.15; }
+  .hero-drop { animation: none; opacity: 1; }
 }
