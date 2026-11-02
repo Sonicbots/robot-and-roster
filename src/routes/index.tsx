@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import hero from "@/assets/hero-robot.jpg";
+import { FallingTools } from "@/components/FallingTools";
 
 export const Route = createFileRoute("/")({
   head: () => ({

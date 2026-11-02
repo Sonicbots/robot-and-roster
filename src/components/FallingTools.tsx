@@ -32,9 +32,13 @@ const tools: Tool[] = [
   { Icon: Ruler, left: 17, size: 34, dur: 23, delay: -25, opacity: 0.13, spin: -240, tint: "text-primary" },
 ];
 
-export function FallingTools() {
+export function FallingTools({ variant = "fixed" }: { variant?: "fixed" | "hero" }) {
+  const container =
+    variant === "hero"
+      ? "pointer-events-none absolute inset-0 z-0 overflow-hidden"
+      : "pointer-events-none fixed inset-0 -z-10 overflow-hidden";
   return (
-    <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div aria-hidden="true" className={container}>
       {tools.map((t, i) => (
         <t.Icon
           key={i}
