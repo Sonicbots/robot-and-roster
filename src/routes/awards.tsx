@@ -23,9 +23,9 @@ const awards = [
 function Awards() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
-      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Recognition</p>
-      <h1 className="mt-3 text-5xl font-extrabold md:text-6xl">Awards</h1>
-      <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+      <p className="hero-drop text-sm font-semibold uppercase tracking-[0.3em] text-primary" style={{ animationDelay: "0.05s" }}>Recognition</p>
+      <h1 className="hero-drop mt-3 text-5xl font-extrabold md:text-6xl" style={{ animationDelay: "0.2s" }}>Awards</h1>
+      <p className="hero-drop mt-6 max-w-2xl text-lg text-muted-foreground" style={{ animationDelay: "0.4s" }}>
         A placeholder list — send me the awards you have actually won and the year for each.
       </p>
       <div className="mt-12 grid gap-5 sm:grid-cols-3">

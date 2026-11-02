@@ -26,9 +26,9 @@ function Robot() {
     <>
       <section className="bg-navy text-navy-foreground">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent">This season</p>
-          <h1 className="mt-3 text-5xl font-extrabold md:text-6xl">The robot</h1>
-          <p className="mt-4 max-w-xl opacity-80">Every season starts from scratch. Here's what went into this year's machine.</p>
+          <p className="hero-drop text-sm font-semibold uppercase tracking-[0.3em] text-accent" style={{ animationDelay: "0.05s" }}>This season</p>
+          <h1 className="hero-drop mt-3 text-5xl font-extrabold md:text-6xl" style={{ animationDelay: "0.2s" }}>The robot</h1>
+          <p className="hero-drop mt-4 max-w-xl opacity-80" style={{ animationDelay: "0.4s" }}>Every season starts from scratch. Here's what went into this year's machine.</p>
         </div>
       </section>
       <section className="mx-auto grid max-w-6xl gap-5 px-6 py-20 sm:grid-cols-2 lg:grid-cols-3">

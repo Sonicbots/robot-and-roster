@@ -26,9 +26,9 @@ const slots = [
 function Gallery() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
-      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Photos</p>
-      <h1 className="mt-3 text-5xl font-extrabold md:text-6xl">Gallery</h1>
-      <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+      <p className="hero-drop text-sm font-semibold uppercase tracking-[0.3em] text-primary" style={{ animationDelay: "0.05s" }}>Photos</p>
+      <h1 className="hero-drop mt-3 text-5xl font-extrabold md:text-6xl" style={{ animationDelay: "0.2s" }}>Gallery</h1>
+      <p className="hero-drop mt-6 max-w-2xl text-lg text-muted-foreground" style={{ animationDelay: "0.4s" }}>
         Send me your photos and I will drop them into these frames.
       </p>
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
