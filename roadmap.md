@@ -5,3 +5,4 @@
 - [ ] Replace placeholder details: competition count, contact email, robot specs
 - [ ] Team number #31944 in the header — keep tightening its position beside "Contact Us" on request
 - [x] Team logo removed from the header on request — browser tab icon still uses the team mark
+- [x] Falling-tools animated background added over the new blue gradient background
