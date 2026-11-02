@@ -29,8 +29,8 @@ const members = [
 function Team() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
-      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">The crew</p>
-      <h1 className="mt-3 text-5xl font-extrabold md:text-6xl">Meet the team</h1>
+      <p className="hero-drop text-sm font-semibold uppercase tracking-[0.3em] text-primary" style={{ animationDelay: "0.05s" }}>The crew</p>
+      <h1 className="hero-drop mt-3 text-5xl font-extrabold md:text-6xl" style={{ animationDelay: "0.2s" }}>Meet the team</h1>
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {members.map((m) => (
           <div key={m.n} className="rounded-xl border bg-card p-6">
