@@ -36,6 +36,7 @@ function Index() {
       <section className="relative isolate min-h-[85vh] overflow-hidden bg-ink text-navy-foreground">
         <img src={hero} alt="Sonic Bots robot on the competition field" className="absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-hero-fade" />
+        <FallingTools variant="hero" />
         <div className="mx-auto flex min-h-[85vh] max-w-6xl flex-col justify-end px-6 pb-20">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent">FIRST Tech Challenge</p>
           <h1 className="text-6xl font-extrabold leading-none md:text-8xl">
