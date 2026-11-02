@@ -33,22 +33,22 @@ const tools: Tool[] = [
 ];
 
 export function FallingTools({ variant = "fixed" }: { variant?: "fixed" | "hero" }) {
-  const container =
-    variant === "hero"
-      ? "pointer-events-none absolute inset-0 z-0 overflow-hidden"
-      : "pointer-events-none fixed inset-0 -z-10 overflow-hidden";
+  const hero = variant === "hero";
+  const container = hero
+    ? "pointer-events-none absolute inset-0 z-0 overflow-hidden"
+    : "pointer-events-none fixed inset-0 -z-10 overflow-hidden";
   return (
     <div aria-hidden="true" className={container}>
       {tools.map((t, i) => (
         <t.Icon
           key={i}
-          className={`falling-tool absolute ${t.tint}`}
+          className={`falling-tool absolute ${hero ? "falling-tool-hero" : ""} ${t.tint}`}
           style={{
             left: `${t.left}%`,
             top: 0,
             width: t.size,
             height: t.size,
-            opacity: t.opacity,
+            opacity: hero ? Math.min(0.6, t.opacity * 2.5) : t.opacity,
             animationDuration: `${t.dur}s`,
             animationDelay: `${t.delay}s`,
             ["--spin" as string]: `${t.spin}deg`,
