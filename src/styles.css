@@ -82,3 +82,19 @@
 }
 
 @utility bg-hero-fade { background: var(--gradient-hero); }
+
+@keyframes tool-fall {
+  from { transform: translateY(-12vh) rotate(0deg); }
+  to { transform: translateY(112vh) rotate(var(--spin, 360deg)); }
+}
+
+.falling-tool {
+  animation-name: tool-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .falling-tool { animation: none; }
+}
