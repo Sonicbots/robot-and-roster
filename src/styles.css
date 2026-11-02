@@ -95,6 +95,10 @@
   will-change: transform;
 }
 
+.falling-tool-hero {
+  filter: drop-shadow(0 0 6px color-mix(in oklab, currentcolor 70%, transparent));
+}
+
 @media (prefers-reduced-motion: reduce) {
   .falling-tool { animation: none; }
 }

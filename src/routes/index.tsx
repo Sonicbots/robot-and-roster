@@ -37,7 +37,7 @@ function Index() {
         <img src={hero} alt="Sonic Bots robot on the competition field" className="absolute inset-0 -z-20 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-hero-fade" />
         <FallingTools variant="hero" />
-        <div className="mx-auto flex min-h-[85vh] max-w-6xl flex-col justify-end px-6 pb-20">
+        <div className="relative z-10 mx-auto flex min-h-[85vh] max-w-6xl flex-col justify-end px-6 pb-20">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent">FIRST Tech Challenge</p>
           <h1 className="text-6xl font-extrabold leading-none md:text-8xl">
             Sonic<br /><span className="text-primary">Bots</span>
