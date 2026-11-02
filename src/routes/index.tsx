@@ -38,12 +38,12 @@ function Index() {
         <div className="absolute inset-0 -z-10 bg-hero-fade" />
         <FallingTools variant="hero" />
         <div className="relative z-10 mx-auto flex min-h-[85vh] max-w-6xl flex-col justify-end px-6 pb-20">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent">FIRST Tech Challenge</p>
-          <h1 className="text-6xl font-extrabold leading-none md:text-8xl">
+          <p className="hero-drop mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent" style={{ animationDelay: "0.05s" }}>FIRST Tech Challenge</p>
+          <h1 className="hero-drop text-6xl font-extrabold leading-none md:text-8xl" style={{ animationDelay: "0.2s" }}>
             Sonic<br /><span className="text-primary">Bots</span>
           </h1>
-          <p className="mt-6 max-w-lg text-lg opacity-80">A team consisting of 11 members each with their own job and role in creating the overall robot.</p>
-          <div className="mt-8 flex gap-3">
+          <p className="hero-drop mt-6 max-w-lg text-lg opacity-80" style={{ animationDelay: "0.4s" }}>A team consisting of 11 members each with their own job and role in creating the overall robot.</p>
+          <div className="hero-drop mt-8 flex gap-3" style={{ animationDelay: "0.55s" }}>
             <Link to="/team" className="rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground hover:opacity-90">Meet the team</Link>
             <Link to="/robot" className="rounded-full border border-navy-foreground/30 px-6 py-3 font-semibold hover:bg-navy-foreground/10">See the robot</Link>
           </div>
