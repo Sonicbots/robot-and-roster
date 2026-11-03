@@ -90,9 +90,7 @@ function Season() {
             Photos
           </div>
         </div>
-      ) : (
-        <p className="mt-12 text-sm text-muted-foreground">Pick a season above to see what we did.</p>
-      )}
+      ) : null}
     </section>
   );
 }
