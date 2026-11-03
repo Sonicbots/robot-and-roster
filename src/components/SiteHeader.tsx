@@ -4,7 +4,7 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/team", label: "About" },
   { to: "/robot", label: "Robot" },
-  { to: "/gallery", label: "Season" },
+  { to: "/season", label: "Season" },
   { to: "/outreach", label: "Outreach" },
   { to: "/awards", label: "Sponsors" },
   { to: "/contact", label: "Contact Us" },
