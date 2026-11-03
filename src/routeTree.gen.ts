@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as OutreachRouteImport } from './routes/outreach'
 import { Route as RobotRouteImport } from './routes/robot'
+import { Route as SeasonRouteImport } from './routes/season'
 import { Route as TeamRouteImport } from './routes/team'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +48,11 @@ const RobotRoute = RobotRouteImport.update({
   path: '/robot',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SeasonRoute = SeasonRouteImport.update({
+  id: '/season',
+  path: '/season',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TeamRoute = TeamRouteImport.update({
   id: '/team',
   path: '/team',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/gallery': typeof GalleryRoute
   '/outreach': typeof OutreachRoute
   '/robot': typeof RobotRoute
+  '/season': typeof SeasonRoute
   '/team': typeof TeamRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/gallery': typeof GalleryRoute
   '/outreach': typeof OutreachRoute
   '/robot': typeof RobotRoute
+  '/season': typeof SeasonRoute
   '/team': typeof TeamRoute
 }
 export interface FileRoutesById {
@@ -79,15 +87,30 @@ export interface FileRoutesById {
   '/gallery': typeof GalleryRoute
   '/outreach': typeof OutreachRoute
   '/robot': typeof RobotRoute
+  '/season': typeof SeasonRoute
   '/team': typeof TeamRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/awards' | '/contact' | '/gallery' | '/outreach' | '/robot' | '/team'
+    | '/'
+    | '/awards'
+    | '/contact'
+    | '/gallery'
+    | '/outreach'
+    | '/robot'
+    | '/season'
+    | '/team'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/awards' | '/contact' | '/gallery' | '/outreach' | '/robot' | '/team'
+    | '/'
+    | '/awards'
+    | '/contact'
+    | '/gallery'
+    | '/outreach'
+    | '/robot'
+    | '/season'
+    | '/team'
   id:
     | '__root__'
     | '/'
@@ -96,6 +119,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/outreach'
     | '/robot'
+    | '/season'
     | '/team'
   fileRoutesById: FileRoutesById
 }
@@ -106,6 +130,7 @@ export interface RootRouteChildren {
   GalleryRoute: typeof GalleryRoute
   OutreachRoute: typeof OutreachRoute
   RobotRoute: typeof RobotRoute
+  SeasonRoute: typeof SeasonRoute
   TeamRoute: typeof TeamRoute
 }
 
@@ -153,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RobotRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/season': {
+      id: '/season'
+      path: '/season'
+      fullPath: '/season'
+      preLoaderRoute: typeof SeasonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/team': {
       id: '/team'
       path: '/team'
@@ -170,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   GalleryRoute: GalleryRoute,
   OutreachRoute: OutreachRoute,
   RobotRoute: RobotRoute,
+  SeasonRoute: SeasonRoute,
   TeamRoute: TeamRoute,
 }
 export const routeTree = rootRouteImport
