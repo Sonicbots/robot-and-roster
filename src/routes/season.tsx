@@ -18,7 +18,7 @@ export const Route = createFileRoute("/season")({
 const seasons = [
   {
     id: "1",
-    name: "Season 1",
+    name: "DECODE",
     tag: "Build Season",
     blurb:
       "Where the robot starts: CAD sketches, part lists, and long nights in the shop getting the first drivetrain rolling.",
@@ -30,7 +30,7 @@ const seasons = [
   },
   {
     id: "2",
-    name: "Season 2",
+    name: "BIOBUZZ",
     tag: "Competition Season",
     blurb:
       "Where it gets proven: practice matches, driver practice, and the robot on the competition floor.",
