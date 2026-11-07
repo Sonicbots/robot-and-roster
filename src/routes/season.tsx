@@ -99,8 +99,18 @@ function Season() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
               {active.overlay ? (
-                <span className="absolute left-[67%] top-[71%] flex h-[22%] -translate-x-1/2 -translate-y-1/2 items-center justify-center whitespace-nowrap rounded-xl border-2 border-primary/70 bg-linear-to-b from-navy to-ink px-3 font-display text-[3.8cqw] font-extrabold uppercase italic leading-none tracking-normal text-primary-foreground shadow-[0_0_40px_-8px_var(--color-primary)] [text-shadow:0_0_16px_color-mix(in_oklab,var(--color-primary)_85%,transparent)]">
-                  {active.overlay}
+                <span className="absolute left-[68%] top-[71%] flex h-[26%] -translate-x-1/2 -translate-y-1/2 -rotate-1 items-center justify-center overflow-hidden whitespace-nowrap rounded-2xl border border-primary/60 bg-linear-to-b from-navy via-ink to-navy px-5 font-display text-[4.4cqw] font-extrabold uppercase italic leading-none text-primary-foreground ring-1 ring-white/10 shadow-[0_0_60px_-10px_var(--color-primary),inset_0_1px_0_0_color-mix(in_oklab,var(--color-primary)_35%,transparent)]">
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 bg-linear-to-tr from-transparent via-white/10 to-transparent"
+                  />
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-y-0 left-0 w-[7%] bg-linear-to-b from-primary/70 via-primary to-primary/70"
+                  />
+                  <span className="relative [text-shadow:0_0_18px_color-mix(in_oklab,var(--color-primary)_85%,transparent)]">
+                    {active.overlay}
+                  </span>
                 </span>
               ) : null}
             </div>
