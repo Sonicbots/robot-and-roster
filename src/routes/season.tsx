@@ -99,7 +99,7 @@ function Season() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
               {active.overlay ? (
-                <span className="absolute left-[68%] top-[71%] flex h-[22%] -translate-x-1/2 -translate-y-1/2 items-center justify-center whitespace-nowrap rounded-xl border-2 border-primary/70 bg-linear-to-b from-navy to-ink px-4 font-display text-[5cqw] font-extrabold uppercase italic leading-none tracking-normal text-primary-foreground shadow-[0_0_40px_-8px_var(--color-primary)] [text-shadow:0_0_16px_color-mix(in_oklab,var(--color-primary)_85%,transparent)]">
+                <span className="absolute left-[67%] top-[71%] flex h-[22%] -translate-x-1/2 -translate-y-1/2 items-center justify-center whitespace-nowrap rounded-xl border-2 border-primary/70 bg-linear-to-b from-navy to-ink px-3 font-display text-[3.8cqw] font-extrabold uppercase italic leading-none tracking-normal text-primary-foreground shadow-[0_0_40px_-8px_var(--color-primary)] [text-shadow:0_0_16px_color-mix(in_oklab,var(--color-primary)_85%,transparent)]">
                   {active.overlay}
                 </span>
               ) : null}
