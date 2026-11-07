@@ -29,6 +29,7 @@ const seasons = [
       ["Code focus", "Autonomous routines written and tuned on the field"],
     ],
     photo: decodePhoto.url,
+    overlay: "DECODE",
   },
   {
     id: "2",
@@ -42,6 +43,7 @@ const seasons = [
       ["Pit work", "Checklists, spare parts and quick repairs between matches"],
     ],
     photo: null,
+    overlay: null,
   },
 ];
 
@@ -90,11 +92,18 @@ function Season() {
             ))}
           </dl>
           {active.photo ? (
-            <img
-              src={active.photo}
-              alt={`The Sonic Bots robot during the ${active.name} season`}
-              className="mt-8 aspect-video w-full rounded-xl border object-cover"
-            />
+            <div className="@container relative mt-8 aspect-[3/2] w-full overflow-hidden rounded-xl border">
+              <img
+                src={active.photo}
+                alt={`The Sonic Bots robot during the ${active.name} season`}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              {active.overlay ? (
+                <span className="absolute left-[67%] top-[71%] flex h-[22%] -translate-x-1/2 -translate-y-1/2 items-center justify-center whitespace-nowrap rounded-xl border-2 border-primary/70 bg-linear-to-b from-navy to-ink px-3 font-display text-[3.8cqw] font-extrabold uppercase italic leading-none tracking-normal text-primary-foreground shadow-[0_0_40px_-8px_var(--color-primary)] [text-shadow:0_0_16px_color-mix(in_oklab,var(--color-primary)_85%,transparent)]">
+                  {active.overlay}
+                </span>
+              ) : null}
+            </div>
           ) : (
             <div className="mt-8 flex aspect-video items-center justify-center rounded-xl border border-dashed text-sm font-semibold uppercase tracking-widest text-muted-foreground">
               Photos
