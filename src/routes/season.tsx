@@ -104,10 +104,6 @@ function Season() {
                     aria-hidden
                     className="pointer-events-none absolute inset-0 bg-linear-to-tr from-transparent via-white/10 to-transparent"
                   />
-                  <span
-                    aria-hidden
-                    className="pointer-events-none absolute inset-y-0 left-0 w-[7%] bg-linear-to-b from-primary/70 via-primary to-primary/70"
-                  />
                   <span className="relative [text-shadow:0_0_18px_color-mix(in_oklab,var(--color-primary)_85%,transparent)]">
                     {active.overlay}
                   </span>
