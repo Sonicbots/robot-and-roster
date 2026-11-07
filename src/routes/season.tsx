@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import decodePhoto from "@/assets/decode-season-robot.png.asset.json";
 
 export const Route = createFileRoute("/season")({
   head: () => ({
@@ -27,6 +28,7 @@ const seasons = [
       ["Build focus", "Drivetrain, intake and lift assembled and tested"],
       ["Code focus", "Autonomous routines written and tuned on the field"],
     ],
+    photo: decodePhoto.url,
   },
   {
     id: "2",
@@ -39,6 +41,7 @@ const seasons = [
       ["Events", "Qualifiers, then the championship run"],
       ["Pit work", "Checklists, spare parts and quick repairs between matches"],
     ],
+    photo: null,
   },
 ];
 
@@ -86,9 +89,17 @@ function Season() {
               </div>
             ))}
           </dl>
-          <div className="mt-8 flex aspect-video items-center justify-center rounded-xl border border-dashed text-sm font-semibold uppercase tracking-widest text-muted-foreground">
-            Photos
-          </div>
+          {active.photo ? (
+            <img
+              src={active.photo}
+              alt={`The Sonic Bots robot during the ${active.name} season`}
+              className="mt-8 aspect-video w-full rounded-xl border object-cover"
+            />
+          ) : (
+            <div className="mt-8 flex aspect-video items-center justify-center rounded-xl border border-dashed text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+              Photos
+            </div>
+          )}
         </div>
       ) : null}
     </section>
