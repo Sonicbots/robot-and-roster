@@ -5,6 +5,7 @@
 - [ ] Replace placeholder details: competition count, contact email, robot specs
 - [ ] Fill in real Season 1 / Season 2 names and details on the new Season page (currently placeholder text)
 - [ ] BIOBUZZ season still shows the empty "Photos" frame — send a photo to drop in
+- [ ] DECODE photo: big editable DECODE text overlay placed over the intake (user wants real text, not baked into the image)
 - [x] DECODE season photo spot filled with the uploaded arena robot photo
 - [ ] Team number #31944 in the header — keep tightening its position beside "Contact Us" on request
 - [x] Team logo removed from the header on request — browser tab icon still uses the team mark

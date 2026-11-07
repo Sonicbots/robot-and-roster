@@ -29,6 +29,7 @@ const seasons = [
       ["Code focus", "Autonomous routines written and tuned on the field"],
     ],
     photo: decodePhoto.url,
+    overlay: "DECODE",
   },
   {
     id: "2",
@@ -42,6 +43,7 @@ const seasons = [
       ["Pit work", "Checklists, spare parts and quick repairs between matches"],
     ],
     photo: null,
+    overlay: null,
   },
 ];
 
@@ -90,11 +92,18 @@ function Season() {
             ))}
           </dl>
           {active.photo ? (
-            <img
-              src={active.photo}
-              alt={`The Sonic Bots robot during the ${active.name} season`}
-              className="mt-8 aspect-video w-full rounded-xl border object-cover"
-            />
+            <div className="@container relative mt-8 aspect-[3/2] w-full overflow-hidden rounded-xl border">
+              <img
+                src={active.photo}
+                alt={`The Sonic Bots robot during the ${active.name} season`}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              {active.overlay ? (
+                <span className="absolute left-[67%] top-[71%] w-[32%] -translate-x-1/2 -translate-y-1/2 rounded-lg bg-background/80 px-2 py-1 text-center font-display text-[7cqw] font-extrabold uppercase leading-none tracking-tight text-foreground shadow-lg">
+                  {active.overlay}
+                </span>
+              ) : null}
+            </div>
           ) : (
             <div className="mt-8 flex aspect-video items-center justify-center rounded-xl border border-dashed text-sm font-semibold uppercase tracking-widest text-muted-foreground">
               Photos
