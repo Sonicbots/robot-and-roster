@@ -99,7 +99,7 @@ function Season() {
                 className="absolute inset-0 h-full w-full object-cover"
               />
               {active.overlay ? (
-                <span className="absolute left-[67%] top-[71%] flex h-[25%] w-[34%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg bg-background/80 px-2 text-center font-display text-[8cqw] font-extrabold uppercase leading-none tracking-tight text-foreground shadow-lg">
+                <span className="absolute left-[67%] top-[71%] flex h-[25%] -translate-x-1/2 -translate-y-1/2 items-center justify-center whitespace-nowrap rounded-lg bg-background px-4 font-display text-[8cqw] font-extrabold uppercase leading-none tracking-tight text-foreground shadow-lg">
                   {active.overlay}
                 </span>
               ) : null}
