@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/robot")({
   head: () => ({
@@ -12,13 +12,13 @@ export const Route = createFileRoute("/robot")({
   component: Robot,
 });
 
-const specs = [
-  { t: "Drivetrain", d: "Mecanum drive for full omnidirectional movement." },
-  { t: "Intake", d: "Fast active intake to grab game elements in one pass." },
-  { t: "Lift", d: "Linear slide system to reach the highest scoring zones." },
-  { t: "Autonomous", d: "Encoder and vision-based paths for consistent auto points." },
-  { t: "Software", d: "Java with the FTC SDK, tuned PID control and driver assists." },
-  { t: "Design", d: "Fully modeled in CAD before a single part is cut." },
+export const specs = [
+  { slug: "drivetrain", t: "Drivetrain", d: "Mecanum drive for full omnidirectional movement." },
+  { slug: "intake", t: "Intake", d: "Fast active intake to grab game elements in one pass." },
+  { slug: "lift", t: "Lift", d: "Linear slide system to reach the highest scoring zones." },
+  { slug: "autonomous", t: "Autonomous", d: "Encoder and vision-based paths for consistent auto points." },
+  { slug: "software", t: "Software", d: "Java with the FTC SDK, tuned PID control and driver assists." },
+  { slug: "design", t: "Design", d: "Fully modeled in CAD before a single part is cut." },
 ];
 
 function Robot() {
