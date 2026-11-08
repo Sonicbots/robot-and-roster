@@ -7,6 +7,8 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Get in touch with or sponsor the Sonic Bots FIRST Tech Challenge team." },
       { property: "og:title", content: "Contact & Sponsor — Sonic Bots FTC" },
       { property: "og:description", content: "Support the Sonic Bots robotics team." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Contact,

@@ -14,4 +14,15 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+
+  it.each(["drivetrain", "intake", "lift", "autonomous", "software", "design"])(
+    "matches the standalone robot detail page for %s",
+    (slug) => {
+      const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+      const matches = router.matchRoutes(`/robot/${slug}`);
+      expect(matches.at(-1)?.routeId).toBe("/robot_/$slug");
+      expect(matches.at(-1)?.params).toMatchObject({ slug });
+      expect(matches.some((match) => match.routeId === "/robot")).toBe(false);
+    },
+  );
 });

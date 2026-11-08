@@ -17,6 +17,7 @@ import { Route as OutreachRouteImport } from './routes/outreach'
 import { Route as RobotRouteImport } from './routes/robot'
 import { Route as SeasonRouteImport } from './routes/season'
 import { Route as TeamRouteImport } from './routes/team'
+import { Route as RobotSlugRouteImport } from './routes/robot_.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,6 +59,11 @@ const TeamRoute = TeamRouteImport.update({
   path: '/team',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RobotSlugRoute = RobotSlugRouteImport.update({
+  id: '/robot_/$slug',
+  path: '/robot/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/robot': typeof RobotRoute
   '/season': typeof SeasonRoute
   '/team': typeof TeamRoute
+  '/robot/$slug': typeof RobotSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/robot': typeof RobotRoute
   '/season': typeof SeasonRoute
   '/team': typeof TeamRoute
+  '/robot/$slug': typeof RobotSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/robot': typeof RobotRoute
   '/season': typeof SeasonRoute
   '/team': typeof TeamRoute
+  '/robot_/$slug': typeof RobotSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/robot'
     | '/season'
     | '/team'
+    | '/robot/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/robot'
     | '/season'
     | '/team'
+    | '/robot/$slug'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/robot'
     | '/season'
     | '/team'
+    | '/robot_/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,6 +144,7 @@ export interface RootRouteChildren {
   RobotRoute: typeof RobotRoute
   SeasonRoute: typeof SeasonRoute
   TeamRoute: typeof TeamRoute
+  RobotSlugRoute: typeof RobotSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -192,6 +205,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TeamRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/robot_/$slug': {
+      id: '/robot_/$slug'
+      path: '/robot/$slug'
+      fullPath: '/robot/$slug'
+      preLoaderRoute: typeof RobotSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   RobotRoute: RobotRoute,
   SeasonRoute: SeasonRoute,
   TeamRoute: TeamRoute,
+  RobotSlugRoute: RobotSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

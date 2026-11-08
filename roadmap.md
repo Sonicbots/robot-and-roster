@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Finish clickable robot boxes and verify all six information-and-image pages
+
 - [ ] Fill in real team member names and roles on the About page (currently "Member Two"–"Member Eleven" placeholders)
 - [ ] Confirm home page team count: shows 13, About page lists 11
 - [ ] Replace placeholder details: competition count, contact email, robot specs

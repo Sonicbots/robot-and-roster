@@ -9,6 +9,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Sonic Bots is a FIRST Tech Challenge robotics team building, coding and competing together." },
       { property: "og:title", content: "Sonic Bots — FIRST Tech Challenge Team" },
       { property: "og:description", content: "Meet the Sonic Bots FTC robotics team, our robot and our season." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
