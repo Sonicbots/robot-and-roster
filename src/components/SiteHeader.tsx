@@ -13,18 +13,18 @@ const links = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-ink/90 text-navy-foreground backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center gap-10 px-6 py-4">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4 px-6 py-4 lg:flex-nowrap lg:gap-10">
         <Link to="/" className="font-display text-xl font-extrabold">
           SONIC<span className="text-primary"> BOTS</span>
         </Link>
-        <nav className="flex gap-5 text-sm">
+        <nav className="order-3 flex w-full flex-wrap gap-x-5 gap-y-3 text-sm lg:order-none lg:w-auto lg:flex-nowrap">
           {links.map((l) => (
             <Link key={l.to} to={l.to} className="opacity-70 hover:opacity-100" activeProps={{ className: "opacity-100 text-accent" }} activeOptions={{ exact: true }}>
               {l.label}
             </Link>
           ))}
         </nav>
-        <span className="-ml-6 inline-flex items-center rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-display text-lg font-extrabold tracking-wider text-primary sm:text-xl">
+        <span className="ml-auto inline-flex shrink-0 items-center rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 font-display text-lg font-extrabold tracking-wider text-primary sm:text-xl lg:-ml-6">
           #31944
         </span>
       </div>
