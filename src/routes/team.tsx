@@ -7,6 +7,8 @@ export const Route = createFileRoute("/team")({
       { name: "description", content: "Meet the builders, programmers and outreach crew of the Sonic Bots FTC team." },
       { property: "og:title", content: "Team — Sonic Bots FTC" },
       { property: "og:description", content: "Meet the members of the Sonic Bots robotics team." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Team,

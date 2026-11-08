@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep robot topic content in a shared browser-safe module and render detail URLs through an unnested parameter route so each card opens a standalone page without duplicating the robot overview.
